@@ -1,6 +1,7 @@
 package javaArray;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class JavaArray {
@@ -16,6 +17,8 @@ public class JavaArray {
 		obj.AppendAllElementOfCollection();
 		
 		obj.CreateArrayFromArrayList();
+		
+		obj.IterateElementsUsingIterator();
 	}
 	
 	public void AddElementAtSpecifiedIndex() {
@@ -121,6 +124,37 @@ public class JavaArray {
 		System.out.println("Elements in Array");
 		for (int i = 0; i < objArr.length; i++) {
 			System.out.println(objArr[i]);
+		}
+	}
+	
+	public void IterateElementsUsingIterator() {
+		List<Integer> list = new ArrayList<Integer>();
+		
+		/*
+		 * add() method appends the specified element to the end of given list.
+		 */
+		list.add(1);
+		list.add(21);
+		list.add(3);
+		list.add(4);
+		
+		/*
+		 * iterator() method in list would returns an iterator over the elements
+		 * in given list in proper sequence.
+		 */
+		Iterator<Integer> iter = list.iterator();
+		
+		System.out.println("Elements in list");
+		
+		/*
+		 * hasNext() method returns true if the iterator has more elements, and
+		 * would return an element rather than throwing an exception.
+		 */
+		while(iter.hasNext()) {
+			/*
+			 * next() method returns the next element in the iteration.
+			 */
+			System.out.println(iter.next());
 		}
 	}
 
