@@ -14,6 +14,8 @@ public class JavaArray {
 		obj.AddElementAtSpecifiedIndex();
 		
 		obj.AppendAllElementOfCollection();
+		
+		obj.CreateArrayFromArrayList();
 	}
 	
 	public void AddElementAtSpecifiedIndex() {
@@ -100,6 +102,26 @@ public class JavaArray {
 			System.out.println(i);
 	}
 	
-	
+	/*
+	 * Here we will learn to create Array from ArrayList
+	 */
+	public void CreateArrayFromArrayList() {
+		List list = new ArrayList();
+		list.add("Hi");
+		list.add("8");
+		list.add("How");
+		list.add("You");
+		
+		/*
+		 * toArray() method returns an array containing all of the elements in given list in proper
+		 * sequence (from first to last element)
+		 */
+		Object[] objArr = list.toArray();
+		
+		System.out.println("Elements in Array");
+		for (int i = 0; i < objArr.length; i++) {
+			System.out.println(objArr[i]);
+		}
+	}
 
 }
