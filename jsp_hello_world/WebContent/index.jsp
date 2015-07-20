@@ -8,5 +8,7 @@
 </head>
 <body>
 	<h1>Hello World</h1>
+	
+	<jsp:forward page="/Jsp_servlet?action=ram"></jsp:forward>
 </body>
 </html>
